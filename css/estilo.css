@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f7f6f8;
+    color: #38313c;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/*Menu lateral*/
+
+.sidebar{
+    width: 250px;
+    background: #392e40;
+    color: white;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img{
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.logo h2{
+    font-size: 19px;
+}
+
+.logo span{
+    color: #d6cbdc;
+    font-size: 12px;
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item{
+    padding: 14px;
+    color: #eee;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu-item span{
+    margin-right: 10px;
+}
+
+.menu-item:hover,
+.menu-item.ativo{
+    background: #bd7898;
+    color: white;
+}
+
+.rodape-menu{
+    margin-top: auto;
+    font-size: 12px;
+    text-align: center;
+    color: #ddd;
+}
+
+.rodape-menu small{
+    display: block;
+    margin-top: 6px;
+}
+
+/*Conteúdo*/
+
+.main{
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.topbar h1{
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.topbar p{
+    color: #888;
+    font-size: 14px;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuario small{
+    display: block;
+    color: #888;
+    margin-top: 5px;
+}
+
+.avatar{
+    background: #bd7898;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/*Paginas*/
+
+.pagina{
+    display: none;
+}
+
+.pagina.ativa{
+    display: block;
+}
+
+.boas-vindas{
+    background: linear-gradient(120deg, #bd7898, #8f617e);
+    color: white;
+    padding: 30px;
+    border-radius: 13px;
+    margin-bottom: 25px;
+}
+
+.boas-vindas h2{
+    margin-bottom: 10px;
+}
+
+/*Cards*/
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card span{
+    color: #888;
+    font-size: 13px;
+}
+
+.card h2{
+    margin: 16px 0 8px;
+    font-size: 26px;
+    color: #a45f80;
+}
+
+.card small{
+    color: #999;
+}
+
+/*Quadros*/
+
+.painel-inferior{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.quadro{
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+/*Botões*/
+
+button{
+    background: #bd7898;
+    color: white;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #995a79;
+}
+
+.quadro button{
+    margin: 5px;
+}
+
+/*Formulários*/
+
+.formulario{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    max-width: 650px;
+}
+
+.formulario label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.formulario textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 20px;
+}
+
+.oculto {
+    display: none;
+}
+
+.cabecalho-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* LISTAGENS */
+
+.registro {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.registro small {
+    display: block;
+    color: #888;
+    margin-top: 5px;
+}
+
+.excluir {
+    background: #c94c61;
+    padding: 8px 12px;
+}
+
+/* CALENDÁRIO */
+
+.calendario-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dias-semana,
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.dias-semana span {
+    text-align: center;
+    padding: 10px 2px;
+    font-weight: bold;
+    color: #888;
+}
+
+.dia {
+    border: 1px solid #eee;
+    min-height: 80px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.dia.hoje {
+    background: #fff0f6;
+}
+
+.evento-calendario {
+    background: #f3dce7;
+    color: #713f59;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 75px;
+        padding: 15px 5px;
+    }
+
+    .logo h2 {
+        font-size: 10px;
+    }
+
+    .logo span,
+    .logo img,
+    .rodape-menu {
+        display: none;
+    }
+
+    .menu-item {
+        font-size: 10px;
+        padding: 12px 5px;
+        text-align: center;
+    }
+
+    .menu-item span {
+        display: block;
+        margin: 0 0 5px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .cards,
+    .painel-inferior {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dia {
+        min-height: 60px;
+        padding: 4px;
+    }
+
+    .evento-calendario {
+        font-size: 8px;
+    }
+}
+
+
+/* FOTOS DOS TEMAS */
+
+.preview-foto {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.preview-foto img {
+    display: none;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ead4df;
+}
+
+.preview-foto img.visivel {
+    display: block;
+}
+
+.foto-tema {
+    width: 90px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.tema-informacoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.registro.tema {
+    align-items: center;
+}
+
+
+/* AJUSTES DA AGENDA E LOCAÇÕES */
+
+.calendario-topo h3 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.calendario-topo button {
+    min-width: 42px;
+}
+
+.evento-calendario {
+    cursor: pointer;
+}
+
+.formulario h3 {
+    margin-top: 25px;
+    padding-bottom: 8px;
+    color: #a45f80;
+    border-bottom: 1px solid #ead4df;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
